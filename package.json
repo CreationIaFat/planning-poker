@@ -1,0 +1,23 @@
+{
+  "name": "planningpoker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreationIaFat/planning-poker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CreationIaFat/planning-poker/issues"
+  },
+  "homepage": "https://github.com/CreationIaFat/planning-poker#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
