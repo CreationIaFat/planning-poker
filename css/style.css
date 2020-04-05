@@ -19,4 +19,18 @@ div.imgSmall img{
 p.bold{
     margin: auto;
 }
-@media screen and (max-width: 480px)
+
+ /* 画面幅が480px以下の場合にcssを適応  モバイル用*/
+@media screen and (max-width: 480px){
+
+}
+
+/* 画面幅が960px以上の場合にcssを適応  PC画面および大きなタブレット用*/
+@media screen and (min-width: 960px){
+
+}
+
+/* 画面幅が481px以上959px以下の場合にcssを適応  タブレット用*/
+@media screen and (min-width: 481px) and (max-width:959px){
+
+}
