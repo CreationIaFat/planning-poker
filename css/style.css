@@ -1,7 +1,15 @@
 @charset "UTF-8";
-section{background-color: beige;}
+body{
+    background-color: wheat;
+    margin: 0em;
+}
+section{
+    background-color: beige;
+    padding: 1rem;
+}
 h1{
     color: brown;
+    margin-top: 0em;
     margin-bottom: 0.1em;
 }
 em{font-weight: bold;}
@@ -45,8 +53,27 @@ a.button-link:active{
     transform: rotateY(1px);
     color: white;
 }
+ul.g-nav-list{
+    background: rgb(175, 219, 93);
+    text-align: center;
+    margin: 0px;
+}
+ul.g-nav-list li{
+    display: inline-block;
+}
+ul.g-nav-list li a{
+    display: block;
+    padding: 1em;
+    color: rgb(20, 88, 151);
+    font-size: 12px;
+    text-decoration: none;
+}
+ul.g-nav-list li a::first-line {
+    font-size: 20px;
+    font-weight: bold;
+}
 
- /* 画面幅が480px以下の場合にcssを適応  モバイル用*/
+/* 画面幅が480px以下の場合にcssを適応  モバイル用*/
 @media screen and (max-width: 480px){
 
 }
