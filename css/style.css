@@ -2,7 +2,7 @@
 section{background-color: beige;}
 h1{
     color: brown;
-    margin-bottom: 1em;
+    margin-bottom: 0.1em;
 }
 em{font-weight: bold;}
 p.tanaka{
@@ -19,6 +19,32 @@ div.imgSmall img{
 p.bold{
     margin: auto;
 }
+a{
+    text-align: center;
+    width: 200px;
+    padding: 0.1em;
+}
+a.text-link{
+    color: #008000;
+    text-decoration: underline;
+}
+a.button-link{
+    background: mediumturquoise;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border-bottom: 1px solid #077da1;
+    border-right: 1px solid #077da1;
+    margin: 40px;
+    padding: 5px;
+}
+a.button-link:active{
+    border-bottom: none;
+    border-right: none;
+    transform: rotateY(1px);
+    color: white;
+}
 
  /* 画面幅が480px以下の場合にcssを適応  モバイル用*/
 @media screen and (max-width: 480px){
@@ -27,7 +53,11 @@ p.bold{
 
 /* 画面幅が960px以上の場合にcssを適応  PC画面および大きなタブレット用*/
 @media screen and (min-width: 960px){
-
+/* ホバー時のスタイルの指定 モバイルでも有効にするとiPhoneなどのデバイスだと2回タップしなければリンク先に飛べない問題がある*/
+a:hover{
+    /* 不透明度70% */
+    opacity: 0.7;
+}
 }
 
 /* 画面幅が481px以上959px以下の場合にcssを適応  タブレット用*/
