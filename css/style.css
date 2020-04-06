@@ -26,6 +26,7 @@ div.imgSmall img{
 }
 p.bold{
     margin: auto;
+    padding: 1rem;;
 }
 a{
     text-align: center;
@@ -50,7 +51,7 @@ a.button-link{
 a.button-link:active{
     border-bottom: none;
     border-right: none;
-    transform: rotateY(1px);
+    transform: translateY(1px);
     color: white;
 }
 ul.g-nav-list{
@@ -67,12 +68,54 @@ ul.g-nav-list li a{
     color: rgb(20, 88, 151);
     font-size: 12px;
     text-decoration: none;
+    border-bottom: 1px solid #077da1;
+    border-right: 1px solid #077da1;
+    padding: 5px;
+    margin: 5px;
 }
 ul.g-nav-list li a::first-line {
     font-size: 20px;
     font-weight: bold;
 }
+ul.g-nav-list li a:hover {
+    background-color: #67ca5a;
+    border-bottom: none;
+    border-right: none;
+    transform: translateY(1px);
+}
 
+li.listop {
+    display: block;
+    padding: 1em;
+    color: rgb(20, 88, 151);
+    font-size: 12px;
+    text-decoration: none;
+    border-bottom: 1px solid #077da1;
+    border-right: 1px solid #077da1;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    width: 200px;
+}
+li.listop::first-line{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+td{
+    border: 3px solid #ca0404;
+    width: 50px;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+td:hover{
+    background-color: rgb(219, 214, 214);
+}
+
+td:active{
+    transform: translateX(100px) translateY(-100px);
+}
 /* 画面幅が480px以下の場合にcssを適応  モバイル用*/
 @media screen and (max-width: 480px){
 
