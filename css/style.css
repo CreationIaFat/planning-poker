@@ -116,6 +116,11 @@ td:hover{
 td:active{
     transform: translateX(100px) translateY(-100px);
 }
+
+i{
+    margin-top: none;
+    margin-bottom: none;
+}
 /* 画面幅が480px以下の場合にcssを適応  モバイル用*/
 @media screen and (max-width: 480px){
 
