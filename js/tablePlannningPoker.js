@@ -1,7 +1,8 @@
 /* eslint-disable */
+let amountOfArray = 6; // フィボナッチで見積もりたい選択肢の数をamountOfArrayに代入する。
+
 let planningPoker = [0,1,2];
 console.log("初期の配列の値は[" + planningPoker + "]です。ここから");
-let amountOfArray = 6;
 console.log( "配列の中身が" + amountOfArray + "個になるまで足します。")
 for( let i = 4; i <= amountOfArray; i++){
     let cnt = planningPoker[planningPoker.length -1]
