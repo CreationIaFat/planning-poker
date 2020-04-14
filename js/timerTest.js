@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 // setTimeout clearTimeout setInterval clearInterval ←　グローバル関数
 //　グローバル関数とは、オブジェクトを生成したり、自分で定義しなくても呼び出せるあらかじめ組み込まれた関数をさす
 
@@ -13,6 +14,29 @@
 // タイマーが不要になった場合は、clearTimeout や clearInterval を呼び出してタイマーをキャンセルし、
 // コールバック関数が何度も呼び出されないようにする。
 
+// 遊び
+
+const TimerTestId = setTimeout(
+    () => console.log("(タイマー氏)この俺を止められるかな"),0.1
+    );
+    clearTimeout(TimerTestId);
+    
+    
+    let count = 1; // 表示する秒数を初期化
+    
+    let IntervalId = setInterval(
+        function(){
+            console.log(`${count}秒経過しました`)
+            if(count >= 9){
+                clearInterval(IntervalId);
+                console.log("。。。")
+            }
+            count ++;
+        }
+        ,1000)
+
+    setTimeout(() => console.log(`はい。みんなが静かになるまで${count ++}秒かかりました。`), 10000);
+        
 //---------------------------------------------------------------------------------------------------------------//
 
 // スタートボタン(タイマーの時刻を決定する)
