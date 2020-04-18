@@ -5,13 +5,45 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>other</title>
         <link rel="stylesheet" href="../css/style-other.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/timer.css">
     </head>
     <body>
+        
         <nav>
-            <ul>
-                <li><a href="../index.html">app</a></li>
-                <li><a href="other.html">other</a></li>
+            <ul class="g-nav-list">
+                <li class="listop">Welcome<br>ようこそ</li>
+                <li><a href="../index.html">app<br>アプリ</a></li>
+                <li><a href="./other.html">other<br>その他</a></li>
+                <li class="listop">Welcome<br>ようこそ<li>
             </ul>
-        </nav> 
+        </nav>
+        <section>
+            <h1>
+                Timer
+            </h1>
+            <div id="wrapper">
+                <form id="input-form"> <!-- <form>の説明  http://www.htmq.com/html/input.shtml -->
+
+                    <div class="input-text">
+                        <input type="number" value="5" id="time-input" />　<!-- 秒数入力フォーム -->
+                        <label for="time-input">秒</label>　<!-- 秒数入力フォーム -->
+                    </div>
+
+                    <div class="input-text">
+                        <span>のこり</span>
+                        <span id="count-down">0</span>
+                        <span>秒</span>
+                    </div>
+
+                    <div class="submit">
+                        <button type="button" id="start-button">スタート</button>
+                        <button type="button" id="stop-button">ストップ</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+        <script src="../js/timer.js"></script>
     </body>
 </html>
