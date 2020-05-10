@@ -10,6 +10,37 @@
         <div id="app">
             <!-- vueインスタンスに含まれるdataオプションのvallueを表示する場合、{{ [valueを表示したいkeyを指定s] }} -->
             {{ message }}
+            <!-- Mustache構文では足し算もできる -->
+            {{ 1 + 1 }}
+            <div>
+                {{ 2 +2 }}
+            </div>
+            <div>
+                {{ AAA }}
+            </div>
+            <!-- VueインスタンスのデータはHTMLの属性値(<タグ>の中のやつ)にも使用できる -->
+            <!-- しかし、属性値ではMustache構文を使用することができない -->
+
+            <!-- 属性値でVueインスタンスのデータを参照するには　v-bind　ディレクティブを用いる -->
+            <!-- v-bind ディレクティブは v-bind:属性名＝”参照するデータ名" の形で使う -->
+
+            <!-- ディレクティブとはVue.jsで用いられる特別な属性 -->
+            <!-- ディレクティブを表す特徴として　v-　の接頭辞がついている。 -->
+            <a v-bind:href="AAA">Vue.js</a>
+            <a :href="AAA">Vue.js</a>
+
+            <!-- スマホとタブレットでjsのオブジェクトにtrue or falseを渡すことで切り替えれそう -->
+            <!-- いや、普通に v-if でできましたわ -->
+            <div :class="{foo: isFoo, bar:isBar}"></div>
+            <div :class="[bazClass]"></div>
+            <p v-if="inStock > 10">在庫あり</p>
+            <p v-else-if="inStock > 5">あとちょっとでなくなる</p>
+            <p v-else>ほらなくなちゃった、あーあ</p>
+            <ul>
+                <li v-for="item in items" v-bind:key="item">
+                    {{ item }}
+                </li>
+            </ul>
         </div>
         <script src="./sample01.js"></script>
     </body>
