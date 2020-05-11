@@ -17,6 +17,15 @@ new Vue({
         bazClass: "baz",
         inStock: 0,
         // 配列の表示はダブルコーテーションで囲まないと表示されない↓
-        items: ["ねこ", "犬なのに", "名前は", "ねこw", "ふふふw"]
+        items: ["ねこ", "犬なのに", "名前は", "ねこw", "ふふふw"],
+        count: 0,
+        cnt: 0,
+        cntX: 0,
+        arrayMisaka: [],
+    },
+    methods: {
+        addCntX: function() {
+            this.cntX = this.cntX +1;
+        }
     }
 })

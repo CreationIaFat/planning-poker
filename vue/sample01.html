@@ -41,6 +41,14 @@
                     {{ item }}
                 </li>
             </ul>
+            <div v-on:click="count = count + 1">カウントの追加 </div>
+            <button> {{ count }} </button>
+            <button v-on:click="cnt = 4 - 1/cnt ">カウントの...</button>
+            <div v-if="cnt > 3.73 && cnt < 3.74">もう計算したくないよ</div>
+            <div>{{ cnt }}</div>
+            <button @click="addCntX">
+                    {{ cntX }}
+            </button>
         </div>
         <script src="./sample01.js"></script>
     </body>
