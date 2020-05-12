@@ -102,4 +102,9 @@ function initialize() {
   updateTodoList();
 }
 
+// DOMContentLoaded イベントは、ブラウザがページの解析を完了した段階で <<<一度だけ>>> 発火するイベント
+// 同様なイベントとして window.onloadが ある。
+// window.onload　はページで使う画像を全て読み込んだ後に発火するイベントで　DOMContentLoaded　の後に実行される。
+// 今回のTOdoアプリでは読み込む画像が存在しないので DOMContentLoaded が適切。
+
 document.addEventListener("DOMContentLoaded", initialize.bind(this));
