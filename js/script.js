@@ -92,6 +92,9 @@ function registerDOM() {
 
 /** DOMにイベントを設定する */
 function bindEvents() {
+  // addEventListener　はクリックするとか、キーボードをうつとかの何かしら第一引数のイベントが押された時に発動する。
+  // 詳しくは、こっちを見るとわかりやすい。　
+  // https://techacademy.jp/magazine/20950
   inputForm.addEventListener("submit", event => handleSubmit(event));
 }
 
@@ -99,7 +102,6 @@ function bindEvents() {
 function initialize() {
   registerDOM();
   bindEvents();
-  updateTodoList();
 }
 
 // DOMContentLoaded イベントは、ブラウザがページの解析を完了した段階で <<<一度だけ>>> 発火するイベント
