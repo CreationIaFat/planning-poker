@@ -75,6 +75,11 @@ function addTodo(todoObj) {
 
 /** Todoを登録する処理 */
 function handleSubmit(event) {
+// preventDefaultでブラウザのデフォルトの挙動を停止する
+// preventDefault　がないとページがリロードしてしまう。
+
+// submitボタンをクリックした時のブラウザのデフォルトの挙動は、form要素のaction属性等で指定されたURLへのデータ送信です
+// ここではデータを送信する必要がないため、 preventDefault　で挙動を停止している
   event.preventDefault();
   const todoObj = {
     text: inputForm["input-text"].value
