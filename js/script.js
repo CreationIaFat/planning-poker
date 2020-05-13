@@ -63,13 +63,21 @@ function clearInputForm() {
 
 /** todoListを追加する */
 function addTodo(todoObj) {
+  // ユニークなID
   todoObj.id = "todo-" + (todoList.length + 1);
+  // 作成日
   todoObj.createdAt = new Date().toLocaleString();
+  // 優先度
   todoObj.priority = 3;
+  // 完了フラグ
   todoObj.isDone = false;
+  // 編集中フラグ
   todoObj.isEdit = false;
+  // todoList配列の先頭に挿入する
   todoList.unshift(todoObj);
+  // HTMLを生成する
   updateTodoList();
+  // フォームを初期化する
   clearInputForm();
 }
 
