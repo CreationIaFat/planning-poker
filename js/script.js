@@ -78,6 +78,26 @@ function updateTodoList() {
     todoMain.innerHTML = htmlStrings;
   })
   todoMain.innerHTML = htmlStrings;
+  // 書き換えたHTMLにイベントをバインドする
+  todoList.forEach(todo => {
+    // trタグにidが振られているので、それを拾う
+    const todoEl = document.getElementById(todo.id);
+    // 空の文字もあるのでif文で括る
+    if (todoEl) {
+      // 存在したら、tr内のボタンタグを抽出する
+      todoEl.querySelector("button").forEach(btn => {
+        //　ボタンのdata属性からボタンの種別を判別する
+        // data属性のtypeパラメータ(data-type=XXXX)にdoneかinboxかの文字列を与えている doneなら完了ボタン、inboxなら未完了ボタンになる
+        const type = btn.dataset.type;
+        btn.addEventListener("click", event => {
+          // data属性がinboxもしくはdoneだったら完了 / 未完了ボタンなのでトグル関数を実行する
+          if (type.indexOf("inbox") >= 0 || type.indexOf("done") >= 0) {
+            updateTodoState(todo, type);
+          }
+        })
+      })
+    }
+  })
 }
 
 /** フォームをクリアする */
